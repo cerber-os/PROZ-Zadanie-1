@@ -1,0 +1,49 @@
+.digit {
+
+}
+
+.operators {
+    -fx-background-color: limegreen;
+}
+
+.operators:hover {
+    -fx-background-color: #7acd32;
+}
+
+.operators:pressed {
+    -fx-background-color: #4a8e01;
+}
+
+.backspace {
+    -fx-background-color: darkorange;
+}
+
+.backspace:hover {
+    -fx-background-color: #ff9900;
+}
+
+.backspace:pressed {
+    -fx-background-color: #c26b00;
+}
+
+.equal {
+    -fx-background-color: cornflowerblue;
+}
+
+.equal:hover {
+    -fx-background-color: #64aded;
+}
+
+.equal:pressed {
+    -fx-background-color: #4268a1;
+}
+
+.result {
+    -fx-background-color: darkslategray;
+    -fx-text-fill: white;
+    -fx-border-radius: 0;
+}
+
+.window {
+    -fx-background-color: darkslategray;
+}
