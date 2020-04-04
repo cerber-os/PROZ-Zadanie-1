@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" minHeight="320.0" minWidth="320.0" prefHeight="320.0" prefWidth="320.0" styleClass="window" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
+<VBox alignment="TOP_CENTER" minHeight="320.0" minWidth="320.0" onKeyTyped="#scene_keyType" prefHeight="320.0" prefWidth="320.0" styleClass="window" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
    <children>
-      <TextField id="result" fx:id="result" alignment="CENTER_RIGHT" editable="false" maxHeight="-Infinity" maxWidth="Infinity" styleClass="result" text="0">
+      <TextField id="result" fx:id="result" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="Infinity" styleClass="result" text="0" onKeyTyped="#scene_keyType">
          <font>
             <Font size="20.0" />
          </font>
@@ -47,16 +47,16 @@
             <Button id="btn_digit_6" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="digit" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Button id="btn_digit_3" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="digit" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Button id="btn_digit_5" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="digit" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button id="btn_coma" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnComa_click" text="," textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button id="btn_equal" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="equal" text="=" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button id="btn_add" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="operators" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button id="btn_sub" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="operators" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button id="btn_mul" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="operators" text="*" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button id="btn_div" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="operators" text="/" textAlignment="CENTER" GridPane.columnIndex="3" />
-            <Button id="btn_pwr" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="operators" text="^X" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button id="btn_comma" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnComma_click" text="," textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button id="btn_equal" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnEquals_clear" styleClass="equal" text="=" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button id="btn_op_add" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnOperator_click" styleClass="operators" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button id="btn_op_sub" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnOperator_click" styleClass="operators" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button id="btn_op_mul" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnOperator_click" styleClass="operators" text="*" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button id="btn_op_div" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnOperator_click" styleClass="operators" text="/" textAlignment="CENTER" GridPane.columnIndex="3" />
+            <Button id="btn_sqrt" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnExFunc_click" styleClass="operators" text="SQRT" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
             <Button id="btn_clear" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnClear_click" styleClass="backspace" text="AC" textAlignment="CENTER" GridPane.columnIndex="4" />
-            <Button id="btn_sqrt" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="operators" text="./X" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Button id="btn_factorial" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnBoard_click" styleClass="operators" text="X!" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button id="btn_cbrt" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnExFunc_click" styleClass="operators" text="CBRT" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button id="btn_exp" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#btnExFunc_click" styleClass="operators" text="EXP" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>
