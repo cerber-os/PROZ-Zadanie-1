@@ -49,4 +49,31 @@ public class Controller {
         Button btn = (Button) event.getSource();
         result.setText(exp.operator(btn.getText()));
     }
+
+    public void scene_keyType(Event event) {
+        KeyEvent input = (KeyEvent)event;
+        String chr = input.getCharacter();
+
+        // Handle operators
+        Stream.of('+', '-', '*', '/').filter(e -> e == chr.charAt(0)).forEach(e -> {
+            Button btn = new Button();
+            btn.setText(e.toString());
+            Event evt = new Event(btn, null, EventType.ROOT);
+            btnOperator_click(evt);
+        });
+
+        // Delete and backspace
+        Stream.of(127, 8).filter(e -> e == chr.charAt(0)).forEach(e -> btnClear_click());
+
+        // Different commas
+        Stream.of('.', ',').filter(e -> e == chr.charAt(0)).forEach(e -> btnComma_click());
+
+        // Digits
+        if(chr.charAt(0) >= '0' && chr.charAt(0) <= '9') {
+            Button btn = new Button();
+            btn.setText(chr);
+            Event evt = new Event(btn, null, EventType.ROOT);
+            btnBoard_click(evt);
+        }
+    }
 }
