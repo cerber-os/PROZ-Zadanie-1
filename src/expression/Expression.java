@@ -136,7 +136,7 @@ public class Expression {
             operator = secondArgument = "";
             clearOnDigit = true;
         } catch (IncorrectExpressionException e) {
-            handler.handle("Expression contains error", e.toString());
+            handler.handle("Expression contains error", e.getMessage());
             clear();
             return "0";
         }

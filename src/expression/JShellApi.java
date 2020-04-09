@@ -56,7 +56,7 @@ public class JShellApi {
             throw new IncorrectExpressionException("Provided expression contains unknown error");
 
         if (result.contains("Infinity"))
-            throw new IncorrectExpressionException("Result of provided expressions exceeds calculation range");
+            throw new IncorrectExpressionException("Result of provided expression exceeds calculation range");
 
         if (result.contains("NaN"))
             throw new IncorrectExpressionException("Expression contains invalid argument");
