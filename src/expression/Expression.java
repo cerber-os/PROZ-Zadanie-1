@@ -22,7 +22,7 @@ public class Expression {
             firstArgument = JShellApi.executeTwoArgsExpr(firstArgument, operator, secondArgument);
             operator = secondArgument = "";
         } catch (IncorrectExpressionException e) {
-            handler.handle("Expression contains error", e.toString());
+            handler.handle("Expression contains error", e.getMessage());
             clear();
         }
     }

@@ -45,7 +45,7 @@ public class JShellApi {
                         if (e.exception() == null)
                             throw new IncorrectExpressionException("Provided expression contains unknown error");
                         else
-                            throw new IncorrectExpressionException(e.exception().toString());
+                            throw new IncorrectExpressionException(e.exception().getMessage());
                     }
                 }
             }
