@@ -28,7 +28,7 @@ public class JShellApi {
      * @throws IncorrectExpressionException It is thrown when provided expression either caused exception in JShellApi itself or returned non-numeric result
      */
     static private String executeExpression(String exp) throws IncorrectExpressionException {
-        String result = "";
+        var result = "";
 
         // Validate input expression
         if (exp.equals(""))
