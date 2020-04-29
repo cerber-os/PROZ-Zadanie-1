@@ -5,6 +5,7 @@ import java.util.Map;
 /**
  * Exception thrown by JShellApi in case of error during expression execution
  */
+@SuppressWarnings("serial")
 public class IncorrectExpressionException extends Exception {
     /**
      * Map storing exception messages to be converted
