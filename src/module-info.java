@@ -1,6 +1,8 @@
 module Calculator {
-    requires javafx.base;
-    requires javafx.fxml;
-    requires javafx.controls;
+    requires transitive javafx.base;
+    requires transitive javafx.fxml;
+    requires transitive javafx.controls;
     requires jdk.jshell;
+    exports calculator;
+    opens calculator to javafx.fxml;
 }
